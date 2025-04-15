@@ -4,4 +4,4 @@ router = APIRouter()
 
 @router.get("/")
 def home():
-    return {"message": "Xasanov Shop ishga tushdi!"}
+   return {"message": "Xasanov Shop ishga tushdi!"}
