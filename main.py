@@ -1,6 +1,9 @@
-from fastapi import FastAPI
-from routes import router
+from fastapi import FastAPI, Request
 
 app = FastAPI()
 
-app.include_router(router)
+@app.post("/webhook")
+async def webhook(request: Request):
+    data = await request.json()
+    # Bu yerda kelgan ma'lumotlarni qayta ishlash lozim
+    return {"status": "ok"}
